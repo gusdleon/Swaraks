@@ -10,12 +10,12 @@ int main(){
   int cont=0, opcion=0, cuantos=0, producto=0, producto2=0, tortillas=10, leche=11, sabritas=6, pepsi=17, pecsi=15, carne=50, pollo=55, cafe=13, koolaid=2, axe=45, cuantos2=0,cuantos3=0, ganancia=0, perdida=0, sivendidos=0; //VARIABLES COMO CONTADORES Y PRECIOS DE PRODUCTOS
   string si, key2, op, key="pasword",valor, menosven;  // VARIABLES COMO CONTRASE�A Y PRODUCTOS MAS Y MENOS VENDIDOS  SI = ESTA CONDICION TERMINA UNA COMPRA Y REINICIA CONTADORES; KEY2 = CONTRASE�A INGRESADA POR EL USUARIO;  OP = REGRESO AL MENU PRINCIPAL; KEY = CONTRESE�A DEL PROGRAMA; IMPRIME EL PRODUCTO MAS VENDIDO; MENOSVEN = IMPRIME EL MENOS VENDIDO
   do{ //ACCESO AL PROGRAMA (INGRESO DE CONTRASE�A)
-    cout<<"Introdusca la contrase�a para ingresar a la cuenta"<<endl;
+    cout<<"Introdusca la contraseña para ingresar a la cuenta"<<endl;
     cin>>key2;
     system("cls");
     if(key2!=key){
       cout<<"\a\a\a";
-      cout<<"Contrase�a Incorrecta\n";
+      cout<<"Contraseña Incorrecta\n";
       cont++;
       if(cont>=3){
         cout<<"numero de intentos superado";
@@ -25,8 +25,8 @@ int main(){
   }while(key2!=key);
   while(opcion!=6){// AQUI EMPIESA EL VERDADERO PROGRAMA
     //menu principal
-    cout<<"                  ������������MENU�����������\n\n";
-    cout<<"                  �Que desea hacer?             "<<endl;
+    cout<<"                  ************MENU************\n\n";
+    cout<<"                  ¿Que desea hacer?             "<<endl;
     cout<<"                  1.-Articulos comprados        "<<endl;
     cout<<"                  2.-Artiulos vendidos          "<<endl;
     cout<<"                  3.-Ganancias                  "<<endl;
@@ -36,7 +36,7 @@ int main(){
     cin>>opcion;
     if(opcion==1){// COMPRA DE UN PRODUCTO (CLIENTE A LA TIENDA)
       sivendidos++;
-      cout<<"                ������������Catalogo������������\n\n";
+      cout<<"                ************Catalogo************\n\n";
       cout<<"\t\tTortillas- $10\n\t\tLeche- $11\n\t\tSabritas- $6\n\t\tPepsi- $17\n\t\tPecsi- $15\n\t\tCarne- $50\n\t\tPollo- $55\n\t\tCafe- $13\n\t\tKoolaid- $2\n\t\tAxe- $45\n\n";
       do{
         cout<<"\ncuanto de tortillas\n";
@@ -210,14 +210,14 @@ int main(){
           cuantos3=cuantos;
           menosven="koolaid";
         }
-        cout<<"�desea regresar al menu(s/n)\n";
+        cout<<"¿Desea regresar al menu(s/n)\n";
         cin>>op;
       }while(op=="n");
       cout<<"total a pagar = $"<<producto<<endl;
       ganancia=producto;
     }
     if(opcion==2){// COMPRA DE UN PRODUCTO (TIENDA AL PROVEEDOR)
-      cout<<"                ������������Catalogo������������\n\n";
+      cout<<"                ************Catalogo************\n\n";
       cout<<"\t\tTortillas- $10\n\t\tLeche- $11\n\t\tSabritas- $6\n\t\tPepsi- $17\n\t\tPecsi- $15\n\t\tCarne- $50\n\t\tPollo- $55\n\t\tCafe- $13\n\t\tKoolaid- $2\n\t\tAxe- $45\n\n";
       do{
         cout<<"cuanto de tortillas\n";
@@ -260,7 +260,7 @@ int main(){
         cin>>cuantos;
         producto2=producto2+koolaid*cuantos;
         cout<<"Koolaid: "<<"Cantidad: "<<cuantos<<"  Total a pagar hasta ahora: "<<producto2<<endl;
-        cout<<"�desea regresar al menu(s/n)\n";
+        cout<<"¿Desea regresar al menu(s/n)\n";
         cin>>op;
       }while(op=="n");
       cout<<"total a pagar = $"<<producto2<<endl;
@@ -268,7 +268,7 @@ int main(){
     perdida=producto2;
     if(opcion==3){// GANANCIA DE MERCANCIA
       cout<<"\nLa ganancia de hoy fue: $"<<ganancia-perdida<<endl;
-      cout<<"\n�ya termino la venta diaria?(s/n)\n";
+      cout<<"\n¿Ya termino la venta diaria?(s/n)\n";
       cin>>si;
       if(si=="s"){
         ganancia=0;
